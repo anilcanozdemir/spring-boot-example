@@ -9,11 +9,11 @@ public interface CRUDService<EntityResponseDto, EntitySaveRequestDto, EntityUpda
 
     Result add(EntitySaveRequestDto entitySaveRequestDto);
 
-    DataResult<EntityResponseDto> deleteById(Long id);
+    DataResult<EntityResponseDto> deleteById(Integer id);
 
     DataResult<List<EntityResponseDto>> getAll();
 
-    DataResult<EntityResponseDto> getById(Long id);
+    DataResult<EntityResponseDto> getById(Integer id);
 
     Result updateById(EntityUpdateRequestDto entityUpdateRequestDto);
 }
