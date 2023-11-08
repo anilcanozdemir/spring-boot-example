@@ -1,4 +1,4 @@
-package com.amigoscode.ModelMapper;
+package com.amigoscode.Core.ModelMapper;
 
 import com.amigoscode.DTO.CustomerResponseDto;
 import com.amigoscode.DTO.CustomerSaveRequestDTO;

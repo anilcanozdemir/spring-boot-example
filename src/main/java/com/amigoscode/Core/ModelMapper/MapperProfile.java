@@ -1,4 +1,4 @@
-package com.amigoscode.ModelMapper;
+package com.amigoscode.Core.ModelMapper;
 
 public interface MapperProfile<ResponseDto,SaveRequestDto,UpdateRequestDto,Entity>{
     ResponseDto entitytoResponseDto(Entity entity);

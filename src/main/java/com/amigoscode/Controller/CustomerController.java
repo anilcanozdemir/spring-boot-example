@@ -40,7 +40,7 @@ public class CustomerController implements CRUDController<CustomerResponseDto, C
 
     @GetMapping("/getById")
     @Override
-    public ResponseEntity<DataResult<CustomerResponseDto>> getById(@RequestParam Long id) {
+    public ResponseEntity<DataResult<CustomerResponseDto>> getById(@RequestParam Integer id) {
         return ResponseEntity.status(HttpStatus.FOUND).body(customerService.getById(id));
     }
 
@@ -52,7 +52,7 @@ public class CustomerController implements CRUDController<CustomerResponseDto, C
     }
     @DeleteMapping("deleteById")
     @Override
-    public ResponseEntity<DataResult<CustomerResponseDto>> deleteById(@RequestParam Long id) {
+    public ResponseEntity<DataResult<CustomerResponseDto>> deleteById(@RequestParam Integer id) {
         /*TODO*/
         return ResponseEntity.status(HttpStatus.OK).body(customerService.deleteById(id));
 

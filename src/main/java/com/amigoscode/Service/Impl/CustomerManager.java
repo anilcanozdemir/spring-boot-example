@@ -8,7 +8,7 @@ import com.amigoscode.DTO.CustomerResponseDto;
 import com.amigoscode.DTO.CustomerSaveRequestDTO;
 import com.amigoscode.DTO.CustomerUpdateDTO;
 import com.amigoscode.Entity.Customer;
-import com.amigoscode.ModelMapper.CustomerMapper;
+import com.amigoscode.Core.ModelMapper.CustomerMapper;
 import com.amigoscode.Repository.CustomerRepository;
 import com.amigoscode.Service.Contrats.CustomerService;
 import org.springframework.stereotype.Service;
@@ -52,14 +52,12 @@ public class CustomerManager implements CustomerService {
 
     @Override
     public DataResult<CustomerResponseDto> getById(Integer id) {
-        /*TODO*/
         return this.customerRepository.findById(id).
                 map(value -> new SuccessDataResult<>(customerMapper.entitytoResponseDto(value))).orElse(null);
     }
 
     @Override
     public Result updateById(CustomerUpdateDTO customerUpdateDTO) {
-        /*TODO*/
         this.customerRepository.findById(customerUpdateDTO.getId()).
                 map(customer -> customerRepository.save(customerMapper.updateRequestDtoEntity(customerUpdateDTO)));
         return new SuccessResult("Customer with id:"+customerUpdateDTO.getId()+" is updated.");
